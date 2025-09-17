@@ -1,0 +1,222 @@
+object LOOPAH: TLOOPAH
+  Left = 407
+  Height = 603
+  Top = 114
+  Width = 1058
+  Caption = 'LOOPAH'
+  ClientHeight = 603
+  ClientWidth = 1058
+  Menu = MainMenu1
+  LCLVersion = '4.2.0.0'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 1058
+    Align = alTop
+    ClientHeight = 42
+    ClientWidth = 1058
+    TabOrder = 0
+    object BtnInit: TButton
+      Left = 1
+      Height = 40
+      Top = 1
+      Width = 75
+      Align = alLeft
+      Caption = 'Init'
+      TabOrder = 0
+      OnClick = BtnInitClick
+    end
+    object GroupBox1: TGroupBox
+      Left = 76
+      Height = 40
+      Top = 1
+      Width = 264
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Source'
+      ClientHeight = 20
+      ClientWidth = 260
+      TabOrder = 1
+      object Label2: TLabel
+        Left = 0
+        Height = 20
+        Top = 0
+        Width = 20
+        Align = alLeft
+        Caption = 'Left'
+      end
+      object SELeft: TSpinEdit
+        Left = 20
+        Height = 20
+        Top = 0
+        Width = 50
+        Align = alLeft
+        MaxValue = -1
+        TabOrder = 0
+      end
+      object Label3: TLabel
+        Left = 201
+        Height = 20
+        Top = 0
+        Width = 9
+        Align = alLeft
+        Caption = 'H'
+      end
+      object SEH: TSpinEdit
+        Left = 210
+        Height = 20
+        Top = 0
+        Width = 50
+        Align = alLeft
+        MaxValue = -1
+        TabOrder = 1
+        Value = 600
+      end
+      object Label4: TLabel
+        Left = 140
+        Height = 20
+        Top = 0
+        Width = 11
+        Align = alLeft
+        Caption = 'W'
+      end
+      object SEW: TSpinEdit
+        Left = 151
+        Height = 20
+        Top = 0
+        Width = 50
+        Align = alLeft
+        MaxValue = -1
+        TabOrder = 2
+        Value = 800
+      end
+      object Label5: TLabel
+        Left = 70
+        Height = 20
+        Top = 0
+        Width = 20
+        Align = alLeft
+        Caption = 'Top'
+      end
+      object SETop: TSpinEdit
+        Left = 90
+        Height = 20
+        Top = 0
+        Width = 50
+        Align = alLeft
+        MaxValue = -1
+        TabOrder = 3
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 340
+      Height = 40
+      Top = 1
+      Width = 337
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Window Hook'
+      ClientHeight = 20
+      ClientWidth = 333
+      TabOrder = 2
+      object RadioButton1: TRadioButton
+        Left = 0
+        Height = 20
+        Top = 0
+        Width = 106
+        Align = alLeft
+        Caption = 'Capture Desktop'
+        Checked = True
+        TabOrder = 1
+        TabStop = True
+      end
+      object RadioButton2: TRadioButton
+        Left = 106
+        Height = 20
+        Top = 0
+        Width = 152
+        Align = alLeft
+        Caption = 'Capture Hooked Window'
+        TabOrder = 0
+      end
+      object Button1: TButton
+        Left = 258
+        Height = 20
+        Top = 0
+        Width = 75
+        Align = alLeft
+        Caption = 'Enum'
+        TabOrder = 2
+        OnClick = Button1Click
+      end
+    end
+    object CheckBox1: TCheckBox
+      Left = 677
+      Height = 40
+      Top = 1
+      Width = 84
+      Align = alLeft
+      Caption = 'Proportional'
+      TabOrder = 3
+    end
+  end
+  object Image1: TImage
+    Left = 0
+    Height = 561
+    Top = 42
+    Width = 718
+    Align = alClient
+  end
+  object ListBox1: TListBox
+    Left = 718
+    Height = 561
+    Top = 42
+    Width = 340
+    Align = alRight
+    ItemHeight = 0
+    TabOrder = 1
+    OnClick = ListBox1Click
+    OnSelectionChange = ListBox1SelectionChange
+  end
+  object Timer1: TTimer
+    Interval = 16
+    OnTimer = Timer1Timer
+    Left = 744
+    Top = 48
+  end
+  object MainMenu1: TMainMenu
+    Left = 704
+    Top = 48
+    object MenuItem1: TMenuItem
+      Caption = 'Menu'
+      object MenuItem2: TMenuItem
+        Caption = 'Init'
+        ShortCut = 16457
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Track Cursor'
+        ShortCut = 16468
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Show/Hide Toolbar'
+        ShortCut = 16467
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Capture Window Under Cursor'
+        ShortCut = 16471
+        OnClick = MenuItem5Click
+      end
+      object Quit: TMenuItem
+        Caption = 'Quit'
+        ShortCut = 16465
+        OnClick = QuitClick
+      end
+    end
+  end
+end
